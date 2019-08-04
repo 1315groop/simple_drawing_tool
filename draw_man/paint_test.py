@@ -1,6 +1,5 @@
 import unittest
 from paint import Paint
-from cli import draw
 
 
 class TestPaint(unittest.TestCase):
