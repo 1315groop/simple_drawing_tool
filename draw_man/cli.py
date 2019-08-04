@@ -21,12 +21,10 @@ def main():
     files = create_parser()
     inp = files[0]
     out = files[1]
-    drw_man.draw(inp, out)
-
-    # try:
-    #    drw_man.draw(create_parser())
-    # except Exception as error:
-    #    print("ERROR: " + str(error))
+    try:
+        drw_man.draw(inp, out)
+    except Exception as error:
+        print("ERROR: " + str(error))
 
 
 main()

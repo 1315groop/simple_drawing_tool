@@ -43,5 +43,5 @@ class Drawman:
                         f.write(f"{picture.draw_me()}\n")
 
 
-# dr = Drawman()
-# dr.draw()
+dr = Drawman()
+dr.draw()
