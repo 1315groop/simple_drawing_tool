@@ -37,7 +37,6 @@ class Paint:
             self.line(x1, y2, x2, y2)
 
     def change_col(self, x, y, new_col, cur_col):
-        # maybe i should do this reqursivly line by line
 
         inside = (0 < x <= self.width) and (0 < y <= self.height)
 
@@ -52,7 +51,7 @@ class Paint:
     def bucket_fill(self, x, y, col):
         inside = (0 < x <= self.width) and (0 < y <= self.height)
         if inside:
-            cur_col = self.canvas[y - 1][x - 1]
+            cur_col = self.canvas[y][x]
             if cur_col != col:
                 self.change_col(x, y, col, cur_col)
 

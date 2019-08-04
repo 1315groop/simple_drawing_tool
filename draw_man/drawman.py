@@ -42,6 +42,3 @@ class Drawman:
                     with open(output_file, "a") as f:
                         f.write(f"{picture.draw_me()}\n")
 
-
-dr = Drawman()
-dr.draw()
