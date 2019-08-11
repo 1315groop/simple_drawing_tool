@@ -20,11 +20,20 @@ class Paint:
         inside2 = (0 < x2 <= self.width) and (0 < y2 <= self.height)
         if inside1 and inside2:
             if x1 == x2:
-                for i in range(y1 - 1, y2):
-                    self.canvas[i][x1 - 1] = "x"
+                if y2 >= y1:
+                    for i in range(y1 - 1, y2):
+                        self.canvas[i][x1 - 1] = "x"
+                else:
+                    for i in range(y2 - 1, y1):
+                        self.canvas[i][x1 - 1] = "x"
+
             elif y1 == y2:
-                for j in range(x1 - 1, x2):
-                    self.canvas[y1 - 1][j] = "x"
+                if x2 >= x1:
+                    for j in range(x1 - 1, x2):
+                        self.canvas[y1 - 1][j] = "x"
+                else:
+                    for j in range(x2 - 1, x1):
+                        self.canvas[y1 - 1][j] = "x"
 
     def rectangle(self, x1, y1, x2, y2):
         """draw rectangle"""
